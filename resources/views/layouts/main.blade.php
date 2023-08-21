@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="{{url('vendor/owl.carousel/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{url('vendor/owl.carousel/assets/owl.theme.default.min.css')}}">
     <link rel="stylesheet" href="{{url('vendor/magnific-popup/magnific-popup.min.css')}}">
+{{ Html::style(url('cms/vendor/select2/css/select2.min.css')) }}
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{url('css/theme.css')}}">
@@ -45,6 +46,7 @@
     <link rel="stylesheet" href="{{url('css/theme-shop.css')}}">
 
     <!-- Demo CSS -->
+@stack('after-styles')
 
 
     <!-- Skin CSS -->
@@ -66,7 +68,7 @@
 
     <div role="main" class="main">
 
-        @include('includes.components.sidebar')
+{{--        @include('includes.components.sidebar')--}}
 
         <section role="main"class="content-body">
             @yield('content')
@@ -96,7 +98,10 @@
 <script src="{{url('vendor/owl.carousel/owl.carousel.min.js')}}"></script>
 <script src="{{url('vendor/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
 <script src="{{url('vendor/vide/jquery.vide.min.js')}}"></script>
+{{ Html::script(url('cms/vendor/select2/js/select2.min.js')) }}
+
 <script src="{{url('vendor/vivus/vivus.min.js')}}"></script>
+@stack('after-scripts')
 
 <!-- Theme Base, Components and Settings -->
 <script src="{{url('js/theme.js')}}"></script>

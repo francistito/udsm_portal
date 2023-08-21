@@ -32,7 +32,7 @@ class RaceController extends Controller
     public function registration()
     {
 
-        return view('regi');
+        return view('race.registration');
     }
     /**
      * Store a newly created resource in storage.
