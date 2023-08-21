@@ -30,32 +30,32 @@
           rel="stylesheet" type="text/css">
 
     <!-- Vendor CSS -->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="vendor/animate/animate.min.css">
-    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" href="{{url('vendor/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url('vendor/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{url('vendor/animate/animate.min.css')}}">
+    <link rel="stylesheet" href="{{url('vendor/simple-line-icons/css/simple-line-icons.min.css')}}">
+    <link rel="stylesheet" href="{{url('vendor/owl.carousel/assets/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{url('vendor/owl.carousel/assets/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{url('vendor/magnific-popup/magnific-popup.min.css')}}">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/theme-elements.css">
-    <link rel="stylesheet" href="css/theme-blog.css">
-    <link rel="stylesheet" href="css/theme-shop.css">
+    <link rel="stylesheet" href="{{url('css/theme.css')}}">
+    <link rel="stylesheet" href="{{url('css/theme-elements.css')}}">
+    <link rel="stylesheet" href="{{url('css/theme-blog.css')}}">
+    <link rel="stylesheet" href="{{url('css/theme-shop.css')}}">
 
     <!-- Demo CSS -->
 
 
     <!-- Skin CSS -->
-    <link rel="stylesheet" href="css/skins/default.css">
-    <script src="master/style-switcher/style.switcher.localstorage.js"></script>
+    <link rel="stylesheet" href="{{url('css/skins/default.css')}}">
+    <script src="{{url('master/style-switcher/style.switcher.localstorage.js')}}"></script>
 
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="{{url('css/custom.css')}}">
 
     <!-- Head Libs -->
-    <script src="vendor/modernizr/modernizr.min.js"></script>
+    <script src="{{url('vendor/modernizr/modernizr.min.js')}}"></script>
 
 </head>
 <body>
@@ -66,7 +66,12 @@
 
     <div role="main" class="main">
 
-        @yield('content')
+        @include('includes.components.sidebar')
+
+        <section role="main"class="content-body">
+            @yield('content')
+        </section>
+
 
     </div>
 
@@ -74,34 +79,34 @@
 </div>
 
 <!-- Vendor -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
-<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>
-<script src="master/style-switcher/style.switcher.js" id="styleSwitcherScript" data-base-path=""
+<script src="{{url('vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{url('vendor/jquery.appear/jquery.appear.min.js')}}"></script>
+<script src="{{url('vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+<script src="{{url('vendor/jquery.cookie/jquery.cookie.min.js')}}"></script>
+<script src="{{url('master/style-switcher/style.switcher.js')}}" id="styleSwitcherScript" data-base-path=""
         data-skin-src=""></script>
-<script src="vendor/popper/umd/popper.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="vendor/common/common.min.js"></script>
-<script src="vendor/jquery.validation/jquery.validate.min.js"></script>
-<script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-<script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
-<script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
-<script src="vendor/isotope/jquery.isotope.min.js"></script>
-<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="vendor/vide/jquery.vide.min.js"></script>
-<script src="vendor/vivus/vivus.min.js"></script>
+<script src="{{url('vendor/popper/umd/popper.min.js')}}"></script>
+<script src="{{url('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{url('vendor/common/common.min.js')}}"></script>
+<script src="{{url('vendor/jquery.validation/jquery.validate.min.js')}}"></script>
+<script src="{{url('vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js')}}"></script>
+<script src="{{url('vendor/jquery.gmap/jquery.gmap.min.js')}}"></script>
+<script src="{{'vendor/jquery.lazyload/jquery.lazyload.min.js'}}"></script>
+<script src="{{url('vendor/isotope/jquery.isotope.min.js')}}"></script>
+<script src="{{url('vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+<script src="{{url('vendor/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{url('vendor/vide/jquery.vide.min.js')}}"></script>
+<script src="{{url('vendor/vivus/vivus.min.js')}}"></script>
 
 <!-- Theme Base, Components and Settings -->
-<script src="js/theme.js"></script>
+<script src="{{url('js/theme.js')}}"></script>
 
 <!-- Current Page Vendor and Views -->
-<script src="js/examples/examples.forms.js"></script>
+<script src="{{url('js/examples/examples.forms.js')}}"></script>
 
 
 <!-- Theme Initialization Files -->
-<script src="js/theme.init.js"></script>
+<script src="{{url('js/theme.init.js')}}"></script>
 
 <script>
     (function (i, s, o, g, r, a, m) {
