@@ -15,7 +15,9 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.5",
-        "laravelcollective/html": "^6.4"
+        "laravelcollective/html": "^6.4",
+        "owen-it/laravel-auditing": "^13.5",
+        "webpatser/laravel-uuid": "^4.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
@@ -36,13 +38,14 @@
     },
 
     "autoload": {
-
         "psr-4": {
-            "App\\": "app/",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/",
-            "Database\\Traits\\": "database/traits/"
+            "App\\": "app/"
         },
+        "classmap": [
+            "database/traits",
+            "database/seeds",
+            "database/factories"
+        ],
         "files": [
             "app/helpers.php"
         ]

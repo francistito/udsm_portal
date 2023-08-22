@@ -3,9 +3,6 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" packagePrefix="App\" />
-      <sourceFolder url="file://$MODULE_DIR$/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
-      <sourceFolder url="file://$MODULE_DIR$/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
-      <sourceFolder url="file://$MODULE_DIR$/database/traits" isTestSource="false" packagePrefix="Database\Traits\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Tests\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
@@ -104,6 +101,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/nunomaduro/collision" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravelcollective/html" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/owen-it/laravel-auditing" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/webpatser/laravel-uuid" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -50,7 +50,7 @@ li {
 #header .header-body {
 	display: flex;
 	flex-direction: column;
-	background: #FFF;
+	background: #212529;
 	transition: min-height 0.3s ease;
 	width: 100%;
 	border-top: 3px solid #EDEDED;
