@@ -11,7 +11,7 @@
         <div class="card-body">
             <div class="row">
 
-                {{--First col for Registration fields--}}
+                {{--First col for RaceRegistration fields--}}
                 <div class="col-md-6">
                     <p>{{ getLanguageBlock('lang.auth.mandatory-field') }}</p>
 

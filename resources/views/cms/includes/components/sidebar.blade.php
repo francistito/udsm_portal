@@ -21,120 +21,18 @@
                         </a>
                     </li>
 
-{{--                    <li class="nav-parent">--}}
-{{--                        <a class="nav-link" href="#">--}}
-{{--                            <i class="fas fa-copy" aria-hidden="true"></i>--}}
-{{--                            <span>{{trans('label.blog.post')}}</span>--}}
-{{--                        </a>--}}
-{{--                        <ul class="nav nav-children">--}}
-{{--                            <li>--}}
-{{--                                <a class="nav-link" href="{{route('cms.blog.create')}}">--}}
-{{--                                    {{trans('label.blog.new_post')}}--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <a class="nav-link" href="{{route('cms.blog.index')}}">--}}
-{{--                                    {{trans('label.blog.posts')}}--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <a class="nav-link" href="{{route('cms.category.index')}}">--}}
-{{--                                   {{trans('label.blog.categories')}}--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-
-{{--                        </ul>--}}
-{{--                    </li>--}}
-
-{{--                    <li>--}}
-{{--                        <a class="nav-link" href="{{route('cms.faq.index')}}">--}}
-{{--                            <i class="fas fa-question" aria-hidden="true"></i>--}}
-{{--                            <span>{{trans('label.faqs')}}</span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-
                     <li>
-                        <a class="nav-link" href="{{route('cms.client.index')}}">
+                        <a class="nav-link" href="{{route('race.index')}}">
                             <i class="fas fa-people-carry" aria-hidden="true"></i>
-                            <span>{{trans('label.cms.client.client')}}</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="nav-link" href="{{route('cms.testimonial.index')}}">
-                            <i class="fas fa-newspaper" aria-hidden="true"></i>
-                            <span>{{trans('label.cms.testimonial.client_testimonial')}}</span>
-                        </a>
-                    </li>
-
-{{--                    <li>--}}
-{{--                        <a class="nav-link" href="{!! route('admin.user_manage.index') !!}">--}}
-{{--                            <i class="fas fa-users" aria-hidden="true"></i>--}}
-{{--                            <span>{!! __('label.administrator.users.manage_users') !!}  <br/>--}}
-{{--                                </span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-
-{{--                    <li>--}}
-{{--                        <a class="nav-link" href="{!! route('admin.system_menu') !!}">--}}
-{{--                            <i class="fas fa-cog" aria-hidden="true"></i>--}}
-{{--                            <span>{!! __('label.system') !!}  <br/>--}}
-{{--                                </span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-                    <li>
-                        <a class="nav-link" href="{!! route('cms.slider.index') !!}">
-                            <i class="fas fa-clipboard-list" aria-hidden="true"></i>
-                            <span>{!! __('label.slider') !!}  <br/>
-                                </span>
-                        </a>
-                    </li>
-
-{{--                    <li>--}}
-{{--                        <a class="nav-link" href="{!! route('cms.blog.index') !!}">--}}
-{{--                            <i class="fas fa-cog" aria-hidden="true"></i>--}}
-{{--                            <span>{!! __('Blog') !!}  <br/>--}}
-{{--                                </span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-
-                    <li>
-                        <a class="nav-link" href="{!! route('cms.service.index') !!}">
-                            <i class="fas fa-list" aria-hidden="true"></i>
-                            <span>{!! __('label.service') !!}  <br/>
-                                </span>
+                            <span>{{trans('Registration')}}</span>
                         </a>
                     </li>
 
 
-{{--                    <li>--}}
-{{--                        <a class="nav-link" href="{!! route('cms.training.index') !!}">--}}
-{{--                            <i class="fas fa-cog" aria-hidden="true"></i>--}}
-{{--                            <span>{!! __('label.training') !!}  <br/>--}}
-{{--                                </span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a class="nav-link" href="{!! route('cms.function.index') !!}">--}}
-{{--                            <i class="fas fa-cog" aria-hidden="true"></i>--}}
-{{--                            <span>{!! __('label.functions') !!}  <br/>--}}
-{{--                                </span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a class="nav-link" href="{!! route('cms.career.index') !!}">--}}
-{{--                            <i class="fas fa-cog" aria-hidden="true"></i>--}}
-{{--                            <span>{!! __('label.career') !!}  <br/>--}}
-{{--                                </span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-                    <li>
-                        <a class="nav-link" href="{!! route('cms.about_us.index') !!}">
-                            <i class="fas fa-file" aria-hidden="true"></i>
-                            <span>{!! __('About us') !!}  <br/>
-                            </span>
-                        </a>
-                    </li>
+
+
+
+
 
 
                 </ul>

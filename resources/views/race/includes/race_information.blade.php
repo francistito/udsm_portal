@@ -2,7 +2,8 @@
 <div class="form-row">
     <div class="form-group col-md-6">
         <label class="required font-weight-bold text-dark text-2">Race type</label>
-        {{ Form::select('race_type',code_value()->getCodeValuesForSelectWithNoLang(4),null,['class'=>'form-control select2','required', 'id' => 'race_type','placeholder' => 'Choose race type', 'autocomplete' => 'off']) }}
+        {{ Form::select('race_type_cv_id',code_value()->getCodeValuesForSelectWithNoLang(4),null,['class'=>'form-control select2','required', 'id' => 'race_type','placeholder' => 'Choose race type', 'autocomplete' => 'off']) }}
+        {!! $errors->first('race_type_cv_id', '<span class="badge badge-danger">:message</span>') !!}
 
     </div>
     <div class="form-group col-md-6">

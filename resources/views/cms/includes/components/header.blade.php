@@ -34,7 +34,7 @@
 {{--            <ul class="notifications" id="notification_alerts">--}}
 {{--                @include('includes.components.notification_alerts')--}}
 {{--            </ul>--}}
-            <a class="btn btn-dark" href="{{route('product.demo.view_demo')}}" target="_blank">View Demo</a>
+{{--            <a class="btn btn-dark" href="{{route('product.demo.view_demo')}}" target="_blank">View Demo</a>--}}
 
             <span class="separator"></span>
 

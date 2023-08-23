@@ -194,6 +194,16 @@ if (! function_exists('ad')) {
     }
 }
 
+if (! function_exists('individual_race_cost')) {
+    /**
+     * Access (lol) the Ad:: facade as a simple function.
+     */
+    function individual_race_cost(): int
+    {
+        return 45000;
+    }
+}
+
 if (! function_exists('sec_env')) {
     function sec_env($name, $fallback = '') {
         $env = require __DIR__. './../../config/env.php';

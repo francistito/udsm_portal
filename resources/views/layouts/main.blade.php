@@ -58,6 +58,7 @@
     <div role="main" class="main mt-4" >
 
 {{--        @include('includes.components.sidebar')--}}
+        @include("includes.components.messages")
 
         <section role="main"class="content-body">
             @yield('content')

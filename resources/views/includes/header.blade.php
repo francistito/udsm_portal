@@ -22,6 +22,7 @@
                                     <ul class="nav nav-pills" id="mainNav">
                                         <li class="dropdown">
                                             <a class="dropdown-item dropdown-toggle" href="index-2.html"> Home </a>
+                                            <a class="dropdown-item dropdown-toggle" href="{{url('/login')}}"> Account </a>
                                         </li>
                                     </ul>
                                 </nav>

@@ -25,3 +25,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 includeRouteFiles(__DIR__.'/Cms/');
 
 includeRouteFiles(__DIR__.'/Public/');
+includeRouteFiles(__DIR__.'/Web/');

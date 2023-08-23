@@ -17,7 +17,7 @@
                 <div class="card">
                     <div class="card-body">
 
-                            {!! Form::open(['route' => ['race.store_registration'],'method'=>'post', 'autocomplete' => 'off',  'id' =>'store_registration', 'class' => 'form-horizontal needs-validation', 'novalidate','enctype'=>"multipart/form-data"]) !!}
+                            {!! Form::open(['route' => ['race.store'],'method'=>'post', 'autocomplete' => 'off',  'id' =>'store_registration', 'class' => 'form-horizontal needs-validation', 'novalidate','enctype'=>"multipart/form-data"]) !!}
 
                             <input type="hidden" value="true" name="emailSent" id="emailSent">
 
@@ -43,15 +43,17 @@
                         <div class="form-row mt-2">
                             <div class="col">
                                 <div class="custom-control custom-checkbox pb-3">
-                                    <input type="checkbox"  id="terms" required>
-                                    <a> <label class="" for="shipbillingaddress" data-toggle="modal" data-target="#noAnimModal">I agree with Terms and conditions</label></a>
+                                    <input type="checkbox" name="terms" id="terms" required>
+                                    {!! $errors->first('terms', '<span class="badge badge-danger">:message</span>') !!}
+
+                                    <a> <label class=""  data-toggle="modal" data-target="#noAnimModal">I agree with Terms and conditions</label></a>
 
                                 </div>
                             </div>
                         </div>
                             <div class="form-row">
                                 <div class="form-group col-md-12 mb-5">
-                                    <input type="submit" id="contactFormSubmit" value="Send Message"
+                                    <input type="submit" id="contactFormSubmit" value="Submit"
                                            class="btn btn-primary btn-modern pull-right" data-loading-text="Loading...">
                                 </div>
                             </div>
@@ -112,19 +114,17 @@
                 $("#" + 'group').show();
                 $("#" + 'individual').hide();
 
-                $("#" + 'individual_input').prop("disabled", true);
+                $("." + 'individual_input').prop("disabled", true);
 
-                $("#" + 'group_input').prop("disabled", false);
+                $("." + 'group_input').prop("disabled", false);
                 jQuery('.select2-container').css('width','100%');
 
             }
             function activate_individual_type() {
                 $("#" + 'group').hide();
                 $("#" + 'individual').show();
-                $("#" + 'group_input').prop("disabled", true);
-
-                $("#" + 'individual_input').prop("disabled", true);
-                $( "#race_type_input" ).prop( "disabled", true );
+                $("." + 'group_input').prop("disabled", true);
+                $("." + 'individual_input').prop("disabled", false);
             }
 
             // window.onload = function () {
