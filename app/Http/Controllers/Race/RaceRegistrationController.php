@@ -124,9 +124,26 @@ class RaceRegistrationController extends Controller
      * @return void
      * change status to confirm payment
      */
-    public function changeStatus($status)
+    public function changeStatus($race_registration)
     {
+        $race_registration = $this->registration_repo->getByUuid($race_registration);
+        $status = $race_registration->ispaid;
+        switch ($status)
+        {
+            case 1:
+                $race_registration->ispaid = 0;
+                break;
 
+            case 0:
+                $race_registration->ispaid = 1;
+
+                break;
+
+            default :
+                $race_registration->ispaid = 1;
+        }
+        $race_registration->save();
+        return redirect()->back();
     }
 
     public function getAllIndividualForDt()

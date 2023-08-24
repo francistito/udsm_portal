@@ -22,7 +22,7 @@
 @push('after-scripts')
     <script type="text/javascript">
         var url = "{{ url("/") }}";
-        $('#group-table').DataTable({
+        var table =    $('#group-table').DataTable({
             processing: true,
             serverSide: true,
             ajax:{
@@ -45,11 +45,18 @@
                     render: function(data, type, row, meta){
                         return  `
                            <div class="btn-group flex-wrap pull-right">
-                            ${(row.status == 0) ? '<a class="view_inventory" href="{{}}" id="view_inventory"><b>{{trans('Confirm')}}</b></a>' : '<a class="view_offering" href="{{route('race.change_status',0)}}" id="view_offering"><b>{{trans('Unconfirm')}}</b></a>'}   </div>`
+                            ${(row.ispaid == 0) ? '<a class="confirm_payment" href="#" id="confirm_payment"><b>{{trans('Confirm')}}</b></a>' : '<a class="confirm_payment" href="#" id="view_offering"><b>{{trans('Unconfirm')}}</b></a>'}   </div>`
                     }
                 },
             ],
 
+        });
+
+
+        $(document).on('click','.confirm_payment',function () {
+            var data = table.row($(this).parents('tr')).data();
+            console
+            document.location.href = url + "/race/change_status/" + data.uuid ;
         });
     </script>
 @endpush
