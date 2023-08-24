@@ -3,9 +3,11 @@
 namespace App\Models\Race;
 
 use App\Models\BaseModel;
+use App\Models\Race\Attribute\RaceRegistrationAttribute;
 
 class RaceRegistration extends BaseModel
 {
+    use RaceRegistrationAttribute;
     //
 
     protected $guarded = [];

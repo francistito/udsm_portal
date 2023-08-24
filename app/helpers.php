@@ -203,7 +203,29 @@ if (! function_exists('individual_race_cost')) {
         return 45000;
     }
 }
+if (! function_exists('group_race_cost')) {
+    /**
+     * Access (lol) the Ad:: facade as a simple function.
+     */
+    function group_race_cost(): int
+    {
+        return 40000;
+    }
+}
 
+if (!function_exists('proper_case_word')) {
+    function proper_case_word($string) {
+        $string = strtolower(remove_extra_white_spaces($string));
+        return  ucwords($string);
+    }
+}
+
+if (! function_exists("remove_extra_white_spaces")) {
+    function remove_extra_white_spaces($value) {
+        $value =  preg_replace('/\s+/', ' ', $value );
+        return $value;
+    }
+}
 if (! function_exists('sec_env')) {
     function sec_env($name, $fallback = '') {
         $env = require __DIR__. './../../config/env.php';

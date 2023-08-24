@@ -80,7 +80,7 @@
 
 
 
-                                                                    @include('payments.includes.invoice.nextpay')
+                                    @include('payments.includes.invoice.selcom')
 
 
                                 @include('payments.includes.other_payments')

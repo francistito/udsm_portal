@@ -75,26 +75,28 @@ class RaceRegistrationRepository extends BaseRepository
         $registration->delete();
     }
 
-    //get all post
-    public function getQueryAllBlogs()
-    {
-        return $this->query()
-            ->select([
-                DB::raw('events.id as id'),
-                DB::raw('events.title as title'),
-                DB::raw('events.content as content'),
-                DB::raw('events.user_id as user_id'),
-                DB::raw('events.isactive as isactive'),
-                DB::raw('events.created_at as created_at'),
-                DB::raw('events.uuid as uuid'),
-            ]);
 
-    }
 
     /*Get all for Datatable Client*/
     public function getAllForDt()
     {
-        $query = $this->getQueryAllBlogs();
+        $query = $this->getAll();
+        return $query;
+    }
+
+    public function getAllRegistrationByRaceType($race_type)
+    {
+        $query = $this->query();
+        switch ($race_type)
+        {
+            case 8 :
+                 $query->where('race_type_cv_id',8)->get();
+                break;
+            case 9:
+                 $query->where('race_type_cv_id',9)->get();
+                break;
+        }
+
         return $query;
     }
 

@@ -81,6 +81,8 @@
 <script src="{{url('vendor/jquery.validation/jquery.validate.min.js')}}"></script>
 <script src="{{url('vendor/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
 {{ Html::script(url('cms/vendor/select2/js/select2.min.js')) }}
+{{ Html::script(url("/assets/nextbyte/js/custom.js")) }}
+
 
 @stack('after-scripts')
 

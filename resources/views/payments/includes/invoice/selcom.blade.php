@@ -1,4 +1,4 @@
-@if(!$invoice->ispaid && !$invoice->iscancelled)
+@if(!$race_registration->ispaid && !$race_registration->iscancelled)
 <div class="row">
     <div class="col-md-9">
         <div><strong>PAY WITH MASTERPASS</strong></div>
@@ -13,8 +13,8 @@
                         <li>Choose 5-Make Payments</li>
                         <li>Choose 1-Merchant Payments</li>
                         <li>Choose 1-Pay with SelcomPay/Masterpass</li>
-                        <li>Enter Amount <strong>{{ round($invoice->amount, 0) }}</strong></li>
-                        <li>Enter the reference number (Pay Number) : <strong>{{ $invoice->payment_token }}</strong></li>
+                        <li>Enter Amount <strong>{{ round($race_registration->cost, 0) }}</strong></li>
+                        <li>Enter the reference number (Pay Number) : <strong>{{ $race_registration->payment_token }}</strong></li>
                         <li>Enter PIN</li>
                         <li>You will receive confirmation SMS</li>
                     </ol>
@@ -29,8 +29,8 @@
                         <li><strong>Dial *150*50#</strong></li>
                         <li>Enter PIN</li>
                         <li>Choose 2 – Selcom Pay/Masterpass</li>
-                        <li>Enter Pay Number (Pay Number) : <strong>{{ $invoice->payment_token }}</strong></li>
-                        <li>Enter Amount <strong>{{ round($invoice->amount, 0) }}</strong></li>
+                        <li>Enter Pay Number (Pay Number) : <strong>{{ $race_registration->payment_token }}</strong></li>
+                        <li>Enter Amount <strong>{{ round($race_registration->cost, 0) }}</strong></li>
                         <li>Please confirm payment by entering 1</li>
                         <li>You will receive confirmation SMS</li>
                     </ol>
@@ -46,8 +46,8 @@
                         <li>Choose 5 - Payments</li>
                         <li>Choose 1 - Lipa Hapa</li>
                         <li>Choose 2 - Pay by Masterpass QR</li>
-                        <li>Enter Merchant Number (Pay Number) : <strong>{{ $invoice->payment_token }}</strong></li>
-                        <li>Enter Amount <strong>{{ round($invoice->amount, 0) }}</strong></li>
+                        <li>Enter Merchant Number (Pay Number) : <strong>{{ $race_registration->payment_token }}</strong></li>
+                        <li>Enter Amount <strong>{{ round($race_registration->cost, 0) }}</strong></li>
                         <li>Enter PIN</li>
                         <li>You will receive confirmation SMS</li>
                     </ol>
@@ -64,8 +64,8 @@
                         <li><strong>Dial *150*88#</strong></li>
                         <li>Choose 5 - Pay Merchant</li>
                         <li>Choose 3 – Selcom Pay/Masterpass</li>
-                        <li>Enter Pay Number (Pay Number) : <strong>{{ $invoice->payment_token }}</strong></li>
-                        <li>Enter amount <strong>{{ round($invoice->amount, 0) }}</strong></li>
+                        <li>Enter Pay Number (Pay Number) : <strong>{{ $race_registration->payment_token }}</strong></li>
+                        <li>Enter cost <strong>{{ round($race_registration->cost, 0) }}</strong></li>
                         <li>Enter PIN</li>
                         <li>You will receive confirmation SMS</li>
                     </ol>
@@ -80,8 +80,8 @@
                         <li><strong>Dial *150*71#</strong></li>
                         <li>Choose 6 - Pay Merchant</li>
                         <li>Choose 2 – SelcomPay/Masterpass</li>
-                        <li>Enter Pay Number (Pay Number) : <strong>{{ $invoice->payment_token }}</strong></li>
-                        <li>Enter amount <strong>{{ round($invoice->amount, 0) }}</strong></li>
+                        <li>Enter Pay Number (Pay Number) : <strong>{{ $race_registration->payment_token }}</strong></li>
+                        <li>Enter cost <strong>{{ round($race_registration->cost, 0) }}</strong></li>
                         <li>Enter PIN</li>
                         <li>You will receive confirmation SMS</li>
                     </ol>
@@ -96,8 +96,8 @@
                         <li><strong>Dial *150*01#</strong></li>
                         <li>Choose 5 – Pay Merchant</li>
                         <li>Choose 2 – Pay Masterpass QR Merchant</li>
-                        <li>Enter 8-digit Merchant number (Pay Number) : <strong>{{ $invoice->payment_token }}</strong></li>
-                        <li>Enter amount <strong>{{ round($invoice->amount, 0) }}</strong></li>
+                        <li>Enter 8-digit Merchant number (Pay Number) : <strong>{{ $race_registration->payment_token }}</strong></li>
+                        <li>Enter cost <strong>{{ round($race_registration->cost, 0) }}</strong></li>
                         <li>Enter PIN</li>
                         <li>You will receive a confirmation SMS</li>
                     </ol>
@@ -115,8 +115,8 @@
                         <li>Choose 4 - Lipa by M-Pesa</li>
                         <li>Choose 4 - Enter business number</li>
                         <li>Enter 123123 (As Selcom Pay/Masterpass business number)</li>
-                        <li>Enter reference number (Pay Number) : <strong>{{ $invoice->payment_token }}</strong></li>
-                        <li>Enter amount <strong>{{ round($invoice->amount, 0) }}</strong></li>
+                        <li>Enter reference number (Pay Number) : <strong>{{ $race_registration->payment_token }}</strong></li>
+                        <li>Enter cost <strong>{{ round($race_registration->cost, 0) }}</strong></li>
                         <li>Enter PIN</li>
                         <li>You will receive confirmation SMS</li>
                     </ol>
@@ -128,17 +128,17 @@
     <div class="col-md-3">
 
         <div><strong>ALREADY PAID?</strong></div>
-        <a href="{{ route("payment.check_payment", $invoice->uuid) }}" class="btn btn-primary btn-sm ml-3"><i class="icon fa fa-refresh">&nbsp;Re-Check Status</i></a>
+{{--        <a href="{{ route("payment.check_payment", $race_registration->uuid) }}" class="btn btn-primary btn-sm ml-3"><i class="icon fa fa-refresh">&nbsp;Re-Check Status</i></a>--}}
         <hr/>
 
-        @if (!is_null($invoice->qr))
+        @if (!is_null($race_registration->qr))
             <div><strong>PAY BY MASTERPASS QR</strong></div>
-            <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(100)->generate($invoice->qr)) !!}" height="160" width="160">
+            <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(100)->generate($race_registration->qr)) !!}" height="160" width="160">
             <hr/>
         @endif
 
-        <div><strong>INITIATE PAYMENT DIRECT ON YOUR PHONE WITH NUMBER {{ str_replace("+", "", $user->phone_number) }}</strong></div>
-        <a href="{{ route("payment.wallet", $invoice->uuid) }}" class="btn btn-primary btn-sm ml-3"><i class="icon fa fa-mobile-phone">&nbsp;Pay</i></a>
+        <div><strong>INITIATE PAYMENT DIRECT ON YOUR PHONE WITH NUMBER {{ str_replace("+", "", $race_registration->phone_number) }}</strong></div>
+{{--        <a href="{{ route("payment.wallet", $race_registration->uuid) }}" class="btn btn-primary btn-sm ml-3"><i class="icon fa fa-mobile-phone">&nbsp;Pay</i></a>--}}
         <div class="help-block">Before clicking Pay, hold your phone and wait for further instruction on your phone screen. This method is currently available via <strong>Tigo</strong> and <strong>Airtel</strong> only</div>
         <hr/>
 
